@@ -12,7 +12,10 @@ I just start a container from the ~rust:latest~ image and then connect with the 
 
 #+begin_src shell
 docker run --name sandbox -v c:/Users/adanaos/git/:/git -di rust:latest
+
+docker exec -it sandbox bash
 #+end_src
 
 
-but because copying and pasting is a pain I created ~sandbox-start.sh~ to run the above command
+but because copying and pasting is a pain I created ~sandbox-start.sh~ to run the above command. Likewise I've added the alias ~jkrust~ to my .bashrc to execute bash on the sandbox
+
