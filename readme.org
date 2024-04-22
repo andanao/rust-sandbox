@@ -1,0 +1,18 @@
+* Rust Sandbox
+:PROPERTIES:
+:ID:       4f18e2a1-662c-442c-9bad-b17422f74948
+:END:
+
+This is to play around with rust in a local docker contianer, nothing fancy but windows, IT and I aren't on great terms, besides docker seems like an easier way to compile stuff in windows given the multitude of issues I've been having with well everything regarding setup.
+* Usage
+:PROPERTIES:
+:ID:       8a7c423b-7be1-46e7-bd4d-f4acb6bb5a20
+:END:
+I just start a container from the ~rust:latest~ image and then connect with the terminal
+
+#+begin_src shell
+docker run --name sandbox -v c:/Users/adanaos/git/:/git -di rust:latest
+#+end_src
+
+
+but because copying and pasting is a pain I created ~sandbox-start.sh~ to run the above command
