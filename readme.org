@@ -8,7 +8,7 @@ This is to play around with rust in a local docker contianer, nothing fancy but 
 :PROPERTIES:
 :ID:       8a7c423b-7be1-46e7-bd4d-f4acb6bb5a20
 :END:
-I just start a container from the ~rust:latest~ image and then connect with the terminal
+I start a container from the ~rust:latest~ image and then connect with the terminal
 
 #+begin_src shell
 docker run --name sandbox -v c:/Users/adanaos/git/:/git -di rust:latest
