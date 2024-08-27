@@ -1,16 +1,14 @@
+#[allow(unused)]
+#[allow(dead_code)]
+use std::error::Error;
 
+#[allow(unused)]
+#[allow(dead_code)]
+fn main() -> Result<(), Box<dyn Error>> {
+    println!(
+        "Hostname: {:?}",
+        gethostname::gethostname().into_string().unwrap().chars().next().unwrap()
+    );
 
-fn main() {
-    let names = vec![
-	"Alice",
-	"Bob",
-	"Eve",
-    ];
-
-    for name in names.into_iter(){
-	if name == "Bob" {
-	    continue
-	}
-	println!("{}", name);
-    }
+    Ok(())
 }

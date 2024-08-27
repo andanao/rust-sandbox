@@ -1,0 +1,10 @@
+
+
+fn main() -> Result<(), PolarsError> {
+    // Create a new DataFrame
+    let df = polars_python::make_df();
+
+    println!("{}", df);
+
+    Ok(())
+}
