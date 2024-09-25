@@ -1,14 +1,16 @@
-#[allow(unused)]
-#[allow(dead_code)]
-use std::error::Error;
+use polars::prelude::*;
 
-#[allow(unused)]
-#[allow(dead_code)]
-fn main() -> Result<(), Box<dyn Error>> {
-    println!(
-        "Hostname: {:?}",
-        gethostname::gethostname().into_string().unwrap().chars().next().unwrap()
-    );
+
+fn main() -> Result<(), PolarsError> {
+    // Create a new DataFrame
+    let df = df![
+	"28" => [1, 1, 1, 1],
+	"29" => [1, 2, 3, 4],
+	"time" => [1, 2, 3, 4],
+    ]?;
+
+
+    println!("{}", df);
 
     Ok(())
 }

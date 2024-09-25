@@ -1,11 +1,12 @@
 [package]
-name = "polars-python"
+name = "polars-pyo3-test"
 version = "0.1.0"
 edition = "2021"
 
 [lib]
-name="polars_testing"
+name="polars_pyo3_test"
 # crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 polars = { version = "0.42.0", features = ["lazy"] }
+pyo3 = { version = "0.18", features = ["extension-module"] }
